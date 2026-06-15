@@ -1,0 +1,603 @@
+<!-- Ariel Moreira -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio da Ari!</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://arielmoreira.carrd.co/assets/images/gallery02/2cc49833.gif?v=581233ae">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            float: left;
+        }
+
+        .gallery {
+            width: 50%;
+            padding: 2.5%;
+        }
+
+        .left {
+            width: 30%;
+        }
+
+        .right {
+            width: 70%;
+            padding-left: 2.5%;
+        }
+
+        .mainBody {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .section {
+            padding: 1%;
+            background-color: rgb(54, 169, 130);
+        }
+
+        .carouselSection {
+            padding: 1%;
+            padding-right: 20%;
+            padding-left: 20%;
+        }
+
+        .section2 {
+            padding: 1%;
+            background-color: rgb(22, 104, 77);
+            color: white;
+        }
+
+        .sectionTitle {
+            text-align: center;
+            padding-bottom: 1%;
+        }
+
+        .gallery-title {
+            text-align: center;
+        }
+
+        .bar {
+            width: 100%;
+            padding: 0%;
+            position: sticky;
+            z-index: 10;
+            top: 0px;
+            text-align: center;
+            background-color: rgb(22, 104, 77);
+        }
+
+        .bar-btn {
+            background-color: rgb(11, 76, 54);
+            color: white;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            text-decoration: none;
+            text-wrap: nowrap;
+        }
+
+        .bar-btn:hover {
+            background-color: rgb(6, 49, 35);
+        }
+
+        .about-btn {
+            background-color: rgb(11, 76, 54);
+            color: white;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            padding-right: 1%;
+            padding-left: 1%;
+            text-decoration: none;
+        }
+
+        .about-btn:hover {
+            background-color: rgb(6, 49, 35);
+        }
+
+        .footer {
+            width: 100%;
+            padding: 1%;
+            bottom: 100%;
+            text-align: center;
+            background-color: rgb(22, 104, 77);
+        }
+
+        .footer-btn {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .footer-btn:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: aquamarine;">
+    <div class="bar">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <a role="button" class="btn btn-secondary bar-btn" href="#sobre_mim">Sobre mim</a>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Meus jogos
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#violeta">Violeta</a>
+                    <a class="dropdown-item" href="#princesa_das_nuvens">Princesa das Nuvens</a>
+                    <a class="dropdown-item" href="#projeto_atomo">Projeto: Átomo</a>
+                    <a class="dropdown-item" href="#ploct">Ploct</a>
+                    <a class="dropdown-item" href="#ice_skater">Ice Skater</a>
+                </div>
+            </div>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Animações
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#cutscene_projeto_atomo">Cutscene (Projeto: Átomo)</a>
+                    <a class="dropdown-item" href="#mimico">Mímico</a>
+                </div>
+            </div>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sprites para jogos
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#sprite_mr_illuminati">Mr. Illuminati</a>
+                    <a class="dropdown-item" href="#animacao_ingame_princesa_das_nuvens">Cavaleiro (Princesa das Nuvens)</a>
+                    <a class="dropdown-item" href="#animacoes_ingame_ploct">Ploct (in-game)</a>
+                    <a class="dropdown-item" href="#animacoes_ingame_projeto_atomo">Projeto: Átomo (in-game)</a>
+                </div>
+            </div>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Technical art
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#animator_quack">Implementação do protagonista de Agente Quack!</a>
+                    <a class="dropdown-item" href="#shader_agua">Shader de água configurável</a>
+                </div>
+            </div>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle bar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ilustrações
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#gnar">Gnar (fanart)</a>
+                    <a class="dropdown-item" href="#direitos_trans">Direitos trans</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="mainBody">
+        <div id="carouselExampleIndicators" class="carousel slide" data-interval=false>
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carouselSection">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="..." alt="First slide">
+                        <div class="row">
+                            <div class="column left">
+                                <p>
+                                    aaaaaaaaaa
+                                </p>
+                            </div>
+                            <div class="column right">
+                                <p>
+                                    aaaaaaaaaaaa
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="..." alt="Second slide">
+                        <p>
+                            bbbbbbbbbbbb
+                        </p>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="..." alt="Third slide">
+                        <p>
+                            cccccccccccc
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>-->
+    <div class="mainBody">
+        <div id="sobre_mim" class="section">
+            <h1 class="sectionTitle">Sobre mim</h1>
+            <div class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://arii-mms.itch.io/">
+                            <img src="https://pbs.twimg.com/profile_images/1769801214508638208/N7Wd5y94_400x400.jpg"
+                                alt="Ariel" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Ariel Moreira</h2>
+                        <h5 style="font-style: italic;">Game dev</h5>
+                        <br><br>
+                        <p>
+                            Olá!! Me chamo Ariel, tenho 24 anos, sou mulher não-binária e meus pronomes são ela/dela.
+                            <br><br>
+                            Sou game dev generalista, com foco na área de artes/Technical Art. Tenho bastante
+                            experiência no processo de
+                            produção artística como um todo, desde a etapa de concept art até a implementação na engine
+                            (2D e 3D). Além disso também tenho experiência com programação (C#, Lua, Python e Java) e
+                            com game design.
+                            <br><br>
+                            Minhas outras redes (incluindo a itch.io com todos os meus jogos publicados e o Artstation
+                            com posts mais detalhados) estão linkadas aqui embaixo!!
+                        </p>
+                        <br><br>
+                        <div style="text-align: center; width: 100%;" >
+                            <div class="btn-group"  role="group" aria-label="Basic example">
+                                <a role="button" class="btn btn-secondary bar-btn" href="https://arielmoreira.carrd.co" target="_blank">Portfolio Geral</a>
+                                <a role="button" class="btn btn-secondary bar-btn" href="https://arii-mms.itch.io/" target="_blank">Itch.io</a>
+                                <a role="button" class="btn btn-secondary bar-btn" href="https://www.artstation.com/arielmoreiram" target="_blank">Artstation</a>
+                                <a role="button" class="btn btn-secondary bar-btn" href="https://twitter.com/arii_mms" target="_blank">Twitter</a>
+                                <a role="button" class="btn btn-secondary bar-btn" href="https://www.linkedin.com/in/ariel-moreira-810037170/" target="_blank">Linkedin</a>
+                                <a role="button" class="btn btn-secondary bar-btn" href="https://www.instagram.com/arii_mms/" target="_blank">Instagram</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div id="meus_jogos" class="section">
+            <h1 class="sectionTitle">Meus jogos!</h1>
+            <div id="violeta" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://arii-mms.itch.io/">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery09/c999468d.png?v=581233ae"
+                                alt="Violeta" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Violeta</h2>
+                        <h5 style="font-style: italic;">Projeto ainda em estágios iniciais de desenvolvimento - Artes
+                            ainda não divulgadas.</h5>
+                        <br><br>
+                        <p>
+                            Violeta é um jogo sobre uma jovem mulher trans que, após se perceber marginalizada pela
+                            sociedade, decide se aventurar pelo mundo pós apocalíptico para encontrar um lugar que ela
+                            possa chamar de lar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="princesa_das_nuvens" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://arii-mms.itch.io/princesa-das-nuvens">
+                            <img src="https://img.itch.zone/aW1nLzEyNjEzOTkwLnBuZw==/original/CERLlf.png"
+                                alt="Princesa das Nuvens" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Princesa das Nuvens</h2>
+                        <br><br>
+                        <p>
+                            Nesta aventura, você assumirá o papel de um Guarda Real incumbido da nobre missão de
+                            proteger a princesa do Castelo das Nuvens. Esta fortaleza mágica viaja habilidosamente entre
+                            as nuvens, porém encontra-se em perigo iminente, pois enfrenta um ataque devastador cujo
+                            objetivo é a destruição completa e o fim da vida da princesa. Com coragem e determinação,
+                            sua tarefa será defender o castelo de criaturas místicas e grupos inimigos que se aproximam,
+                            e impedir que a princesa entre desespero e encontre seu triste fim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="projeto_atomo" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://ofurabio.itch.io/projeto-atomo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery09/7e720209.jpg?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Projeto: Átomo</h2>
+                        <br><br>
+                        <p>
+                            Projeto: Átomo é um empolgante jogo no estilo shoot'em up e bullet hell, onde você comanda a
+                            espaçonave da equipe Alefuzo fugindo de Marte após uma expedição desastrosa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="ploct" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://ofurabio.itch.io/ploct">
+                            <img src="https://img.itch.zone/aW1hZ2UvMTU0Mjk3OC8xMjA3NDg3Mi5wbmc=/original/H%2BTr%2BF.png"
+                                alt="Ploct" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Ploct</h2>
+                        <br><br>
+                        <p>
+                            Ploct é um jogo de plataforma 2D onde você é um sapinho explorando as ruínas de uma cidade,
+                            e deve contar com sua forte língua mutante para se locomover pelo cenário
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="ice_skater" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://arii-mms.itch.io/ice-skater">
+                            <img src="https://img.itch.zone/aW1nLzk4OTQyOTYucG5n/315x250%23c/XP4ZRK.png"
+                                alt="Ice Skater" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Ice Skater</h2>
+                        <br><br>
+                        <p>
+                            Um pequeno arcade em que o jogador deve patinar no gelo enquanto pega as bandeiras o mais
+                            rápido possível.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div id="animacoes" class="section">
+            <h1 class="sectionTitle">Animações</h1>
+            <div id="cutscene_projeto_atomo" class="section2">
+                <h2 class="gallery-title">Parte da cutscene do jogo "Projeto: Átomo"</h2>
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/artwork/Ke6OXo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery10/25685f47.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                        <br><br>
+                        <a href="https://www.artstation.com/artwork/Ke6OXo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery10/68a52cd7.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/artwork/Ke6OXo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery10/9157bb2c.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                        <br><br>
+                        <a href="https://www.artstation.com/artwork/Ke6OXo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery10/a76a5563.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="mimico" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <img src="https://arielmoreira.carrd.co/assets/images/gallery01/dbb1a873.gif?v=581233ae"
+                            alt="Mímico" width="100%">
+                    </div>
+                    <div class="column right">
+                        <br><br>
+                        <h2>Estudo de modelagem/shading/rigging/animação feito no Blender.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div id="sprites" class="section">
+            <h1 class="sectionTitle">Sprites para jogos</h1>
+            <div id="sprite_mr_illuminati" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://arii-mms.itch.io/mrilluminatigoestowork">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery02/5b0a953f.gif?v=581233ae"
+                                alt="Mr Illuminati pixel art" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <br><br>
+                        <h2>Versão pixel art do protagonista de "Mr. Illuminati Goes to Work" para futuro remake.</h2>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="animacao_ingame_princesa_das_nuvens" class="section2">
+                <div class="row">
+                    <div class="column left">
+                        <a href="https://arii-mms.itch.io/princesa-das-nuvens">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery02/2cc49833.gif?v=581233ae"
+                                alt="Cavaleiro das nuvens" width="100%">
+                        </a>
+                    </div>
+                    <div class="column right">
+                        <h2>Uma das animações do protagonista de "Princesa das Nuvens".</h2>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="animacoes_ingame_ploct" class="section2">
+                <h2 class="gallery-title">Visuais in-game do jogo "Ploct"</h2>
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://ofurabio.itch.io/ploct">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery06/baadedf8_original.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <a href="https://ofurabio.itch.io/ploct">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery06/621e376c_original.jpg?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="animacoes_ingame_projeto_atomo" class="section2">
+                <h2 class="gallery-title">Animações de morte do jogo "Projeto: Átomo"</h2>
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://ofurabio.itch.io/projeto-atomo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery03/521dca98_original.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <a href="https://ofurabio.itch.io/projeto-atomo">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery03/a532504f_original.gif?v=581233ae"
+                                alt="Projeto: Atomo" width="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div id="technical_art" class="section">
+            <h1 class="sectionTitle">Technical art</h1>
+            <div id="animator_quack" class="section2">
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/artwork/ao9Yxq">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery07/0cad4928.jpg?v=581233ae"
+                                alt="Animator Agente Quack" width="100%">
+                        </a>
+                        <br><br>
+                        <a href="https://www.artstation.com/artwork/ao9Yxq">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery07/bbd0ee50.jpg?v=581233ae"
+                                alt="Animator Agente Quack" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <h2>Visual do Protagonista de "Agente Quack!" implementado na Unity3D</h2>
+                        <br>
+                        <h5>O personagem conta com:</h5>
+                        <br>
+                        <p>
+                            - Um Animation Controller com inúmeros parâmetros e transições entre os estados, para que as
+                            animações sejam o fluidas ao máximo; <br><br>
+                            - Duas layers em seu Animation Controller, para que a qualquer momento o jogador possa "dar
+                            um quack" sem interromper outras animações; <br><br>
+                            - Um script de comportamento para todos os estados de animação, para que a expressão facial
+                            do pinguim mude de acordo com a animação; <br><br>
+                            - Duas UVs, uma para o corpo e outra para as expressões faciais; <br><br>
+                            - Um Shader que o confere um visual cartunizado. <br><br>
+                            Obs.: Esse personagem foi produzido unicamente por mim, desde a concepção até a
+                            implementação na Unity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="shader_agua" class="section2">
+                <h2 class="gallery-title">Shader de água configurável feito por meio do Shader Graph da Unity</h2>
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/artwork/m8mDQv">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery08/a3e0cf6c_original.jpg?v=581233ae"
+                                alt="Shader de agua" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/artwork/m8mDQv">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery08/915d6911_original.jpg?v=581233ae"
+                                alt="Shader de agua" width="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div id="ilustracoes" class="section">
+            <h1 class="sectionTitle">Ilustrações</h1>
+            <div id="gnar" class="section2">
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/arielmoreiram">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery04/0ab4a7e3_original.jpg?v=581233ae"
+                                alt="Gnar" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <h2>Fanart do Gnar, personagem do League of Legends</h2>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="direitos_trans" class="section2">
+                <div class="row">
+                    <div class="column gallery">
+                        <a href="https://www.artstation.com/arielmoreiram">
+                            <img src="https://arielmoreira.carrd.co/assets/images/gallery04/c2fe0ea9_original.jpg?v=581233ae"
+                                alt="Direitos Trans" width="100%">
+                        </a>
+                    </div>
+                    <div class="column gallery">
+                        <h2>Direitos trans são direitos humanos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="footer">
+        <h3>Obrigada por visitar a minha página!</h3>
+        <br>
+        <a class="footer-btn" href="https://arielmoreira.carrd.co">Portfolio Geral</a>
+        <br>
+        <a class="footer-btn" href="https://arii-mms.itch.io/">Itch.io</a>
+        <br>
+        <a class="footer-btn" href="https://www.artstation.com/arielmoreiram">Artstation</a>
+        <br>
+        <a class="footer-btn" href="https://twitter.com/arii_mms">Twitter</a>
+        <br>
+        <a class="footer-btn" href="https://www.linkedin.com/in/ariel-moreira-810037170/">Linkedin</a>
+        <br>
+        <a class="footer-btn" href="https://www.instagram.com/arii_mms/">Instagram</a>
+        <br><br><br><br>
+    </div>
+</body>
+
+</html>

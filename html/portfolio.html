@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ariel Moreira">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <title>Ariel Moreira</title>
+        <link rel="icon" type="image/x-icon" href="images/portinha-no-arbustov4.png">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+
+    <body class="bg-1">
+        <header>
+            <div id="headerDiv"></div>
+        </header>
+        
+        <img src="images/banner.png" alt="banner" width="100%" class="divisor-sm">
+        <div class="gradient-header"></div>
+
+        <nav>
+            <div id="projetos" class="divisor-sm">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                            <h1><strong>Portfolio</strong></h1>
+                        </div>
+                        <div class="col-lg-3"></div>
+                    </div>
+                </div>
+                <div id="flok" class="portfolio-1">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6" style="text-align: center;">
+                                <h3>Flok</h3>
+                                <p><img src="images/icons/woodworkgamestudio_logo.jpg" alt="Woodwork Logo" width="25px"> <i>Woodwork Game Studio</i></p>
+                                <p><span class="tag">Lead Developer</span></p>
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <div style="min-width: 450px; width: 75%;">
+                                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; margin-bottom: 4ch;">
+                                            <iframe src="https://www.youtube.com/embed/xU1hcVbb5rg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe src="https://store.steampowered.com/widget/4538740/" frameborder="0" style="min-width: 450px; width: 90%;" height="190"></iframe>
+                                <div class="row divisor-xs">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                        <div class="bg-pink" style="height: .25ch; border-radius: 12px;"></div>
+                                    </div>
+                                    <div class="col-sm-4"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                        <div id="FlokIndicators" class="carousel slide divisor-xs">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#FlokIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#FlokIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#FlokIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner padding" style="min-height: 400px;">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <p style="line-height: 2.75ch;">
+                                                Para que Flok funcione como um software em overlay, precisei fazer com que a Unity usasse funções do sistema operacional 
+                                                que possibilitassem isso.<br>
+                                                Basicamente, o jogo está sempre em tela cheia porém não renderiza a cor do plano de fundo.<br>
+                                                Quando um clique é efetuado na área não renderizada do jogo, a engine ignora esse clique e permite que seja computado pelo 
+                                                sistema operacional e pelos demais aplicativos.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <img src="images/projects/flok/ss_cab09c9b4952f6111a1e9f40e4a514df0b03b871.1920x1080.jpg" alt="Flok OS overlay" width="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <img src="images/projects/flok/creatureimplementation.png" alt="Flok sistema implementacao" width="100%">
+                                        </div>
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <p style="line-height: 2.75ch;">
+                                                Como Flok é dependente da implementação rápida de bastante conteúdo, ajustes e balanceamento, todo seu sistema é pensado com 
+                                                o objetivo de facilitar todos esses processos, portanto mesmo uma pessoa com nenhuma experiência com a engine e programação 
+                                                pode fazer implementações rapidamente.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <p style="line-height: 2.75ch;">
+                                                Alguns dos sistemas desenvolvidos por mim para o jogo foram:<br>
+                                                • Sistema de gerenciamento dos stats da criatura;<br>
+                                                • Sistema de inventário com diferentes tipos de itens (equipamentos, skins, criaturas);<br>
+                                                • Loja com itens e sistema de gacha;<br>
+                                                • Sistema centralizado de balanceamento;<br>
+                                                • Sistema customizado de UI, para garantir compatibilidade com jogos em overlay.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <img src="images/projects/flok/ss_a3d5592ee22be96c497015e7a3a6abbaaffe3ec2.1920x1080.jpg" alt="Flok features" width="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" style="padding-left: 13%;" type="button" data-bs-target="#FlokIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" style="padding-right: 13%;" type="button" data-bs-target="#FlokIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="violeta" class="portfolio-2">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6" style="text-align: center;">
+                                <h3>Violeta</h3>
+                                <p><span class="tag">Solo Dev</span></p>
+                                <div style="display: flex; justify-content: center; align-items: center;">
+                                    <div style="min-width: 450px; width: 75%;">
+                                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; margin-bottom: 4ch;">
+                                            <iframe src="https://www.youtube.com/embed/dT8-kImVwuc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe frameborder="0" src="https://itch.io/embed/2687695?bg_color=222222&amp;fg_color=eeeeee&amp;border_color=363636" style="min-width: 450px; width: 90%;" height="167"><a href="https://arii-mms.itch.io/violeta">Violeta by Ariel Moreira</a></iframe>
+                                <div class="row divisor-xs">
+                                    <div class="col-sm-4"></div>
+                                    <div class="col-sm-4">
+                                        <div class="bg-pink" style="height: .25ch; border-radius: 12px;"></div>
+                                    </div>
+                                    <div class="col-sm-4"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3"></div>
+                        </div>
+                        <div id="violeta-indicators" class="carousel slide divisor-xs">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#violeta-indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#violeta-indicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#violeta-indicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner padding" style="min-height: 400px;">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <p style="line-height: 2.75ch;">
+                                                Para que Flok funcione como um software em overlay, precisei fazer com que a Unity usasse funções do sistema operacional 
+                                                que possibilitassem isso.<br>
+                                                Basicamente, o jogo está sempre em tela cheia porém não renderiza a cor do plano de fundo.<br>
+                                                Quando um clique é efetuado na área não renderizada do jogo, a engine ignora esse clique e permite que seja computado pelo 
+                                                sistema operacional e pelos demais aplicativos.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <img src="images/projects/flok/ss_cab09c9b4952f6111a1e9f40e4a514df0b03b871.1920x1080.jpg" alt="Flok OS overlay" width="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <img src="images/projects/flok/creatureimplementation.png" alt="Flok sistema implementacao" width="100%">
+                                        </div>
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <p style="line-height: 2.75ch;">
+                                                Como Flok é dependente da implementação rápida de bastante conteúdo, ajustes e balanceamento, todo seu sistema é pensado com 
+                                                o objetivo de facilitar todos esses processos, portanto mesmo uma pessoa com nenhuma experiência com a engine e programação 
+                                                pode fazer implementações rapidamente.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <p style="line-height: 2.75ch;">
+                                                Alguns dos sistemas desenvolvidos por mim para o jogo foram:<br>
+                                                • Sistema de gerenciamento dos stats da criatura;<br>
+                                                • Sistema de inventário com diferentes tipos de itens (equipamentos, skins, criaturas);<br>
+                                                • Loja com itens e sistema de gacha;<br>
+                                                • Sistema centralizado de balanceamento;<br>
+                                                • Sistema customizado de UI, para garantir compatibilidade com jogos em overlay.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6" style="align-content: center;">
+                                            <img src="images/projects/flok/ss_a3d5592ee22be96c497015e7a3a6abbaaffe3ec2.1920x1080.jpg" alt="Flok features" width="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" style="padding-left: 13%;" type="button" data-bs-target="#violeta-indicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" style="padding-right: 13%;" type="button" data-bs-target="#violeta-indicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="gradient-footer"></div>
+
+        <footer>
+            <div id="footerDiv"></div>
+        </footer>
+
+        <script src="/javascript/loader.js"></script>
+    </body>
+</html>
